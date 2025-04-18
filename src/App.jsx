@@ -22,7 +22,7 @@ function App() {
 
   const currencyInfo = useCurrencyInfo(from);
   const currencyNames = useCurrencyNames();
-  const options = Object.keys(currencyInfo)
+  const options = Object.keys(currencyInfo);
   const BackgroundImage = `https://images.pexels.com/photos/8199870/pexels-photo-8199870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
 
   const convertCurrency = useCallback((amount_to_convert=amount) => {
