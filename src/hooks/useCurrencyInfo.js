@@ -6,7 +6,7 @@ function useCurrencyInfo(currency) {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${moment().format('yyyy-MM-DD')}/v1/currencies/${currency}.json`
+    let url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${moment().subtract(1,'days').format('yyyy-MM-DD')}/v1/currencies/${currency}.json`
 
     fetch(url)
     .then(res => res.json())

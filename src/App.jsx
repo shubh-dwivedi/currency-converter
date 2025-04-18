@@ -96,7 +96,7 @@ function App() {
                             />
                         </div>
 
-                        {currencyInfo && <p className='text-center text-gray-800 mt-2'>Exchange Rates last updated on {moment().format('DD MMM, yyyy')}</p>}
+                        {currencyInfo && <p className='text-center text-gray-800 mt-2'>Exchange Rates last updated on {moment().subtract(1,'days').format('DD MMM, yyyy')}</p>}
 
                         {/* <button type="submit" className="w-full font-bold bg-blue-600 text-white px-4 py-3 rounded-lg">
                             Convert {currencyLabels[from]} to {currencyLabels[to]}
