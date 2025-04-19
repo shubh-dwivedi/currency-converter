@@ -96,7 +96,7 @@ function App() {
                             />
                         </div>
 
-                        {currencyInfo && <p className='text-center text-gray-800 mt-2'>Exchange Rates were last updated on {moment().subtract(1,'days').format('DD MMM, yyyy')}</p>}
+                        {currencyInfo && <p className='text-center text-gray-800 mt-2'>Exchange Rates were last updated on {moment(infoDate).format('DD MMM, yyyy')}</p>}
                     </form>
                 </div>
             </div>
