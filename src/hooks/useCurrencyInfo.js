@@ -22,6 +22,7 @@ function useCurrencyInfo(currency, infoDate, setInfoDate) {
 
       const currency_data = await response.json();
       setData(currency_data[currency])
+      setInfoDate(currency_data.date);
     } catch (error) {
       // console.log(error)
     }
