@@ -12,6 +12,7 @@ function App() {
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
+  const [infoDate, setInfoDate] = useState(moment().format('yyyy-MM-DD'));
 
   const swapCurrency = () => {
     setFrom(to)
@@ -20,14 +21,13 @@ function App() {
     setAmount(convertedAmount)
   }
 
-  const currencyInfo = useCurrencyInfo(from);
+  const currencyInfo = useCurrencyInfo(from, infoDate, setInfoDate);
   const currencyNames = useCurrencyNames();
   const options = Object.keys(currencyInfo);
   const BackgroundImage = `https://images.pexels.com/photos/8199870/pexels-photo-8199870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`
 
   const convertCurrency = useCallback((amount_to_convert=amount) => {
     if(currencyInfo[to]) {
-        console.log('check')
         let converted_amount = ((amount_to_convert) * currencyInfo[to]).toFixed(2);
         setConvertedAmount(parseFloat(converted_amount));
     }
