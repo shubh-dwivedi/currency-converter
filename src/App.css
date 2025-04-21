@@ -1,5 +1,4 @@
 .btn-swap:active {
-  border: none;
-  /* border: 0.5px solid #155dfc; */
+  outline: 0.5px solid #155dfc;
   /* box-shadow: 1px 1px 1px 1px #155dfc; */
 }

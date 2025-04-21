@@ -74,7 +74,7 @@ function App() {
                         <div className="relative w-full h-0.5">
                             <button
                                 type="button"
-                                className="btn-swap absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-blue-600 border-1 border-blue-600 text-white px-1 py-1"
+                                className="btn-swap absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md bg-blue-600 border-none text-white px-1 py-1"
                                 onClick={swapCurrency}
                             >
                                 <img src={swap} alt="swap" className='w-7.5' />
